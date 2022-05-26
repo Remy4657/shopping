@@ -1,0 +1,56 @@
+.header {
+    text-align: center;
+    margin: 10rem auto 5rem auto;
+    opacity: 0.7;
+    border-bottom: 2px solid #000;
+    width: fit-content;
+}
+
+.p_text {
+    text-align: center;
+    line-height: 100%;
+    margin-bottom: 5rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.div_text {
+    flex-basis: 50%;
+    background-color: #eee;
+    align-items: center;
+    padding: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    padding: 0 5rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.infor {
+    padding: 0 1rem;
+}
+
+.h3 {
+    margin: 2rem 0;
+    opacity: 0.7;
+}
+
+.link {
+    background-color: #000;
+    color: #fff;
+    padding: .5rem 2rem;
+    width: fit-content;
+    display: block;
+    margin-top: 2rem;
+}
