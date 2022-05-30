@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Remy4657.github.io/shopping",
   "name": "ecommerce",
   "version": "0.1.0",
   "private": true,
@@ -22,7 +23,6 @@
     "eject": "react-scripts eject",
     "predeploy": "react-scripts build",
     "deploy": "gh-pages -d build"
-
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
