@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { addToCart } from '../redux/Shopping/action'
+import { addToCart } from '../../redux/Shopping/action'
 import { useSelector } from 'react-redux'
 
 
@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux'
 function Product(props) {
 
     const dispatch = useDispatch()
-    const cart = useSelector(state => state.shop.cart)
+    const data = useSelector(state => state.shop.cart)
     
     return (
             <div className="product">

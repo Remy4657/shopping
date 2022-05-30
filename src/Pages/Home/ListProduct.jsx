@@ -1,7 +1,8 @@
 import React from 'react'
 import Styled from 'styled-components';
 import Carousel from 'react-elastic-carousel'
-import Product from '../Product'
+import Product from '../Products/Product'
+import { useSelector, useDispatch } from 'react-redux';
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -35,6 +36,9 @@ function ListProduct(props) {
         width: fit-content;
     `
 
+    const data = useSelector(state => state.shop.products)
+    const dispatch = useDispatch()
+
     return (
         <div>
             <H1>Sản phẩm nổi bật</H1>
@@ -42,7 +46,7 @@ function ListProduct(props) {
                 
                 <Carousel breakPoints={breakPoints} className="list-product">
                     {
-                        props.data.map((val, index) => (
+                        data.map((val, index) => (
                             <Item key={index}>
                                 <Product
                                     key={index}
@@ -51,20 +55,13 @@ function ListProduct(props) {
                                     title={val.title}
                                     price={val.price}
                                     product={val}
-                                    onAdd={props.onAdd}
+                                   
                                 />
 
                             </Item>
                         ))
                     }
                     
-                    {/* <Item>2</Item>
-                    <Item>3</Item>
-                    <Item>4</Item>
-                    <Item>5</Item>
-                    <Item>6</Item>
-                    <Item>7</Item>
-                    <Item>8</Item> */}
                 </Carousel>
             </App>
 

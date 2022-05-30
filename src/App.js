@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header"
 import Home from "./Pages/Home/Home"
-import ListProduct from "./Pages/ListProduct"
+import ListProduct from "./Pages/Products/ListProduct"
 import Login from "./Pages/Login/Login"
 import Register from "./Pages/Register"
 import Details from "./Pages/Details"
@@ -72,79 +72,18 @@ function App() {
         setCart(cart.filter((val) => val.id !== product.id))
     }
 
-    // useEffect(() => {
-    //     const storageCart = JSON.parse(localStorage.getItem("cart"))
-    //     if (storageCart)
-    //         setCart(storageCart)
-    // }, [])
-    // useEffect(() => {
-    //     localStorage.setItem("cart", JSON.stringify(cart))
-    // }, [cart])
-
-    // return (< BrowserRouter >
-    //     <
-    //         Header cart={cart}
-    //     />
-
-    //     <
-    //         Routes >
-    //         <
-    //             Route exact path="/"
-    //             element={< Home data={data}
-    //                 onAdd={onAdd}
-    //             />} />
-    //         <
-    //             Route exact path="/product"
-    //             element={< ListProduct data={data}
-    //                 onAdd={onAdd}
-    //             />} />
-    //         <
-    //             Route exact path="/contact"
-    //             element={< Contact />}
-    //         /> <
-    //             Route exact path="/about"
-    //             element={< About />}
-    //         /> <
-    //             Route path="/login"
-    //             element={< Login />}
-    //             exact />
-    //         <
-    //             Route path="/register"
-    //             element={< Register />}
-    //             exact />
-    //         <
-    //             Route path="/product/:id"
-    //             element={< Details data={data}
-    //                 onAdd={onAdd}
-    //             />} exact />
-    //         <
-    //             Route path="/cart"
-    //             element={< Cart cart={cart}
-    //                 onAdd={onAdd}
-    //                 onRemove={onRemove}
-    //                 onDelete={onDelete}
-    //             />} exact />
-
-    //         <
-    //                         /Routes> <
-    //             Footer />
-    //         <
-    //                         /BrowserRouter>
-
-    //         )
-    //                 }
-    //         export default App;return (
+    
     return (
         <BrowserRouter>
             <Header cart={cart} />
             <Routes>
                 <Route
                     exact path="/"
-                    element={< Home data={data} onAdd={onAdd} />}
+                    element={< Home />}
                 />
                 <Route
                     exact path="/product"
-                    element={< ListProduct data={data} onAdd={onAdd} />}
+                    element={< ListProduct />}
                 />
                 <Route
                     exact path="/contact"
@@ -164,15 +103,11 @@ function App() {
                 />
                 <Route
                     exact path="/product/:id"
-                    element={< Details data={data} onAdd={onAdd} />}
+                    element={< Details/>}
                 />
                 <Route
                     exact path="/cart"
-                    element={<
-                        Cart cart={cart}
-                        onRemove={onRemove}
-                        onDelete={onDelete}
-                        onAdd={onAdd} />}
+                    element={<Cart />}
                 />
             </Routes>
             <Footer />

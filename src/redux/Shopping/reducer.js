@@ -1,6 +1,5 @@
 import * as actionTypes from "./type";
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
+
 
 
 const INITIAL_STATE = {

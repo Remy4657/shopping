@@ -44,7 +44,7 @@ function Cart(props) {
                             {cart.map((val, index) => (
 
                                 
-                                <CartItem key={index} product={val} onRemove={props.onRemove} onAdd={props.onAdd} onDelete={props.onDelete}/>
+                                <CartItem key={index} product={val} />
                             ))}
                         </div>
 
@@ -66,7 +66,7 @@ function Cart(props) {
                                 <h3>Total:</h3>
                                 <span>${total.toFixed()}</span>
                             </div>
-                            <button>Payment</button>
+                            <button onClick={() => {alert("Payment Successful")}}>Payment</button>
                         </Payment>
 
                     </div>

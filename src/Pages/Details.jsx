@@ -1,17 +1,17 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import Product from './Product'
+import Product from './Products/Product'
+import { useSelector } from 'react-redux'
 
 function Details(props) {
     
-    
-    const {id} = useParams()
-    console.log('param: ', id)
+    const data = useSelector(state => state.shop.products)
+     const {id} = useParams()
+    // console.log('param: ', id)
 
-    const productFind = props.data.find((val) => {
+    const productFind = data.find((val) => {
         return val.id == id
     })
-    
 
     return (
 
@@ -24,7 +24,6 @@ function Details(props) {
                 title={productFind.title}
                 price={productFind.price}
                 desc={productFind.desc}
-                onAdd={props.onAdd}
                 product={productFind}
             />
 

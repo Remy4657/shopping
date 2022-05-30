@@ -1,10 +1,11 @@
 import React from 'react'
 import Product from './Product'
 import Styled from 'styled-components'
+import { useSelector } from 'react-redux'
 
 
 
-function ListProduct(props) {
+function ListProduct() {
 
     const H1 = Styled.h1`
         text-align: center;
@@ -14,13 +15,14 @@ function ListProduct(props) {
         width: fit-content;
     `
     
+    const data = useSelector(state => state.shop.products)
     
     return (
         
         <div className="content-product">
             <H1>PRODUCT</H1>
             <div className="list-product">
-                {props.data.map((val, index) => (
+                {data.map((val, index) => (
                     <Product
                         key={index}
                         id = {val.id}
@@ -28,7 +30,7 @@ function ListProduct(props) {
                         title={val.title}
                         price={val.price}
                         product={val}
-                        onAdd = {props.onAdd}
+                        
                     />
                 ))}
 

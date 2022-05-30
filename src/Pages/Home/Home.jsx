@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Category from './Category/Category';
 import News from './News';
 import ListProduct from './ListProduct';
+import { useSelector, useDispatch } from 'react-redux';
 import Carousel from 'react-elastic-carousel'
 
 function Home(props) {
@@ -53,6 +54,8 @@ function Home(props) {
     `
     
     /* css end */
+
+    
     
     const [imageIndex, setImageIndex] = useState(0)
 
@@ -98,7 +101,7 @@ function Home(props) {
             <div>
                 
                 <Category />
-                <ListProduct data={props.data} onAdd={props.onAdd}/>
+                <ListProduct/>
                 <News />
             </div>
             
