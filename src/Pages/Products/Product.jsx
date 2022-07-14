@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../redux/Shopping/action'
 import { useSelector } from 'react-redux'
+import styles from './Product.module.css'
 
 
 
@@ -12,12 +13,12 @@ function Product(props) {
     const data = useSelector(state => state.shop.cart)
     
     return (
-            <div className="product">
+            <div id={styles.product} className='product'>
                 <div className="product-img">
                     <img src={props.image} alt="" />
 
                 </div>
-                <div className="product-footer">
+                <div id={styles.product_footer} className='product-footer'>
                     <Link to = {`/product/${props.id}`}>
                         <h4>{props.title}</h4>
 

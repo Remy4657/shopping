@@ -9,12 +9,10 @@ function Register() {
         cfpassword: ""
     });
 
-
     const [focused, setFocused] = useState(false);
     const [focused2, setFocused2] = useState(false);
     const [focused3, setFocused3] = useState(false);
     const [focused4, setFocused4] = useState(false);
-
 
     const handleName = () => {
         setFocused(true);
@@ -34,7 +32,6 @@ function Register() {
         const { name, value } = e.target;
         setInfor({ ...infor, [name]: value });
     };
-
 
     return (
 
