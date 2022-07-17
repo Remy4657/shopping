@@ -6,18 +6,19 @@ import { useSelector } from 'react-redux'
 
 
 
+
 function Product(props) {
 
     const dispatch = useDispatch()
     const data = useSelector(state => state.shop.cart)
     
     return (
-            <div className="product">
+            <div className='product'>
                 <div className="product-img">
                     <img src={props.image} alt="" />
 
                 </div>
-                <div className="product-footer">
+                <div className='product-footer'>
                     <Link to = {`/product/${props.id}`}>
                         <h4>{props.title}</h4>
 

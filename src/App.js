@@ -5,7 +5,7 @@ import Home from "./Pages/Home/Home"
 import ListProduct from "./Pages/Products/ListProduct"
 import Login from "./Pages/Login/Login"
 import Register from "./Pages/Register"
-import Details from "./Pages/Details"
+import Details from "./Pages/Detail/Details"
 import Footer from "./Components/Footer"
 import Cart from './Pages/Cart/Cart'
 import Contact from "./Pages/Contact"
