@@ -37,40 +37,40 @@ function App() {
     // }, [])
     const data = useSelector(state => state.shop.products)
 
-    const onAdd = (product) => {
+    // const onAdd = (product) => {
 
-        const exist = cart.find((x) => x.id === product.id)
+    //     const exist = cart.find((x) => x.id === product.id)
 
 
-        if (exist) {
+    //     if (exist) {
             
-            setCart(cart.map((val) =>
-                val.id === product.id ? {...val, qty: val.qty + 1 } : val
-            ))
-        } else {
-            setCart([...cart, {...product, qty: 1 }])
+    //         setCart(cart.map((val) =>
+    //             val.id === product.id ? {...val, qty: val.qty + 1 } : val
+    //         ))
+    //     } else {
+    //         setCart([...cart, {...product, qty: 1 }])
 
-        }
+    //     }
 
-    }
+    // }
 
-    const onRemove = (product) => {
-        const exist = cart.find((x) => x.id === product.id)
+    // const onRemove = (product) => {
+    //     const exist = cart.find((x) => x.id === product.id)
 
-        if (exist.qty === 1) {
-            setCart(cart.filter((val) => val.id !== product.id))
+    //     if (exist.qty === 1) {
+    //         setCart(cart.filter((val) => val.id !== product.id))
 
-        } else {
-            setCart(
-                cart.map((val) =>
-                    val.id === product.id ? {...val, qty: val.qty - 1 } : val
-                )
-            )
-        }
-    }
-    const onDelete = (product) => {
-        setCart(cart.filter((val) => val.id !== product.id))
-    }
+    //     } else {
+    //         setCart(
+    //             cart.map((val) =>
+    //                 val.id === product.id ? {...val, qty: val.qty - 1 } : val
+    //             )
+    //         )
+    //     }
+    // }
+    // const onDelete = (product) => {
+    //     setCart(cart.filter((val) => val.id !== product.id))
+    // }
 
     
     return (
@@ -79,7 +79,7 @@ function App() {
             <Routes>
                 <Route
                     exact path="/"
-                    element={< Home />}
+                    element={<Home />}
                 />
                 <Route
                     exact path="/product"

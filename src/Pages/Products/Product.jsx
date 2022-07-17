@@ -32,8 +32,7 @@ function Product(props) {
                 }>Add to cart</button>
                 </div>
 
-                
-
+            
             </div>
         
     )

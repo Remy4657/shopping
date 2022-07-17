@@ -86,14 +86,39 @@ const INITIAL_STATE = {
             "img": "https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
             "title": "LOUNGEWEAR LOVE",
             "desc": "Loại áo này “khó tính” hơn áo thun nam nữ ngắn tay, nếu biết cách mix đồ, bạn sẽ trở nên thật cá tính với phong cách thời trang đậm chất Hàn Quốc, nhưng nếu phối đồ không tốt trông bạn như đang “lọt thỏm” trong chiếc áo thun tay lỡ."
+        },{
+            "id": 13,
+            "price": 108,
+            "img": "https://salt.tikicdn.com/cache/525x525/ts/product/f6/1e/3a/8b328a72d2a9986caa636dc6066c5310.jpg",
+            "title": "LOUNGEWEAR LOVE",
+            "desc": "Loại áo này “khó tính” hơn áo thun nam nữ ngắn tay, nếu biết cách mix đồ, bạn sẽ trở nên thật cá tính với phong cách thời trang đậm chất Hàn Quốc, nhưng nếu phối đồ không tốt trông bạn như đang “lọt thỏm” trong chiếc áo thun tay lỡ."
+        },
+        {
+            "id": 14,
+            "price": 108,
+            "img": "https://naidecor.vn/wp-content/uploads/2020/01/ct00192-549k-800x800.jpg",
+            "title": "LOUNGEWEAR LOVE",
+            "desc": "Loại áo này “khó tính” hơn áo thun nam nữ ngắn tay, nếu biết cách mix đồ, bạn sẽ trở nên thật cá tính với phong cách thời trang đậm chất Hàn Quốc, nhưng nếu phối đồ không tốt trông bạn như đang “lọt thỏm” trong chiếc áo thun tay lỡ."
+        },
+        {
+            "id": 15,
+            "price": 108,
+            "img": "https://hidanz.com/wp-content/uploads/2020/10/ao-thun-nam-co-tron2.jpg",
+            "title": "LOUNGEWEAR LOVE",
+            "desc": "Loại áo này “khó tính” hơn áo thun nam nữ ngắn tay, nếu biết cách mix đồ, bạn sẽ trở nên thật cá tính với phong cách thời trang đậm chất Hàn Quốc, nhưng nếu phối đồ không tốt trông bạn như đang “lọt thỏm” trong chiếc áo thun tay lỡ."
+        },
+        {
+            "id": 16,
+            "price": 180,
+            "img": "https://cf.shopee.vn/file/01fe62e8004ba1472183bbc72398124e",
+            "title": "LOUNGEWEAR LOVE",
+            "desc": "Loại áo này “khó tính” hơn áo thun nam nữ ngắn tay, nếu biết cách mix đồ, bạn sẽ trở nên thật cá tính với phong cách thời trang đậm chất Hàn Quốc, nhưng nếu phối đồ không tốt trông bạn như đang “lọt thỏm” trong chiếc áo thun tay lỡ."
         }
     ],
     cart: [],
     currentItem: null,
 };
-
-
-
+ 
 const shopReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case actionTypes.ADD_TO_CART:
