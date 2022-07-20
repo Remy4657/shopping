@@ -4,7 +4,7 @@ import { FaLocationArrow } from 'react-icons/fa'
 import { RiAccountCircleFill } from 'react-icons/ri'
 import { BsFacebook} from 'react-icons/bs'
 import styled from 'styled-components'
-
+import './Footer.scss'
 
 
 function Footer() {

@@ -150,7 +150,6 @@ const shopReducer = (state = INITIAL_STATE, action) => {
 
                     ) : [...state.cart, {...action.payload, qty: 1 }],
 
-
             }
         case actionTypes.INCREASE:
             //const productRemove = state.cart.find((x) => x.id === action.payload.id)

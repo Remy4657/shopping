@@ -1,0 +1,33 @@
+.content-product {
+    margin-top: 61.2px;
+
+    .product-detail {
+        .product {
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-around;
+            border: 1px solid #ccc;
+
+            .product-footer {
+                button {
+                    width: 20%;
+                    padding: 1rem 0;
+                }
+
+                h4 {
+                    cursor: none;
+                }
+
+                flex: 1;
+                width: fit-content;
+            }
+
+            .product-img {
+                flex: 1;
+                border-bottom: none;
+                border-right: 1px solid #ccc;
+                height: 30rem;
+            }
+        }
+    }
+}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaShoppingCart } from 'react-icons/fa'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { useSelector } from 'react-redux'
+import './Header.scss'
 
 function Header(props) {
 

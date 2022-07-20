@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header"
 import Home from "./Pages/Home/Home"
@@ -17,7 +17,7 @@ import { useSelector } from "react-redux";
 function App() {
     const [cart, setCart] = useState([])
     const cartRedux = useSelector(state => state.shop.cart)
-    
+
     // const [data, setData] = useState([])
 
     // async function fetchData(url) {
@@ -43,7 +43,7 @@ function App() {
 
 
     //     if (exist) {
-            
+
     //         setCart(cart.map((val) =>
     //             val.id === product.id ? {...val, qty: val.qty + 1 } : val
     //         ))
@@ -72,46 +72,22 @@ function App() {
     //     setCart(cart.filter((val) => val.id !== product.id))
     // }
 
-    
+
     return (
-        <BrowserRouter>
+        <>
             <Header cart={cart} />
             <Routes>
-                <Route
-                    exact path="/"
-                    element={<Home />}
-                />
-                <Route
-                    exact path="/product"
-                    element={< ListProduct />}
-                />
-                <Route
-                    exact path="/contact"
-                    element={< Contact />}
-                />
-                <Route
-                    exact path="/about"
-                    element={< About />}
-                />
-                <Route
-                    exact path="/login"
-                    element={< Login />}
-                />
-                <Route
-                    exact path="/register"
-                    element={< Register />}
-                />
-                <Route
-                    exact path="/product/:id"
-                    element={< Details/>}
-                />
-                <Route
-                    exact path="/cart"
-                    element={<Cart />}
-                />
+                <Route path="/" element={<Home />} />
+                <Route path="/product" element={< ListProduct />} />
+                <Route path="/contact" element={< Contact />} />
+                <Route path="/about" element={< About />} />
+                <Route path="/login" element={< Login />} />
+                <Route path="/register" element={< Register />} />
+                <Route path="/product/:id" element={< Details />} />
+                <Route path="/cart" element={<Cart />} />
             </Routes>
             <Footer />
-        </BrowserRouter>
+        </>
     )
 }
 export default App

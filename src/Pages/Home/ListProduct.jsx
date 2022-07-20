@@ -3,6 +3,7 @@ import Styled from 'styled-components';
 import Carousel from 'react-elastic-carousel'
 import Product from '../Products/Product'
 import { useSelector, useDispatch } from 'react-redux';
+import './ListProduct.scss'
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },

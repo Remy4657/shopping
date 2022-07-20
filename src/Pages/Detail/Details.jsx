@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import Product from '../Products/Product'
 import { useSelector } from 'react-redux'
+import './Detail.scss'
 
 function Details(props) {
     
