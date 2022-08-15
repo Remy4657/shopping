@@ -52,7 +52,7 @@ app.get("/", (req, res, next) => {
   res.send(data.products);
 });
 
-const port = 8080;
+const port = 5000;
 app.listen(port, () => {
   console.log(`server at http://localhost:${port}`);
 });
