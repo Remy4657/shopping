@@ -1,0 +1,24 @@
+.product {
+  .product-footer {
+    p {
+      span {
+        color: red;
+      }
+      margin: 1rem 0 3rem 0;
+    }
+    button {
+      width: 20rem;
+      background: rgb(58, 54, 54);
+      padding: 0.7rem 0;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  .product-img {
+    border-bottom: 1px solid #ccc;
+    height: 40rem;
+  }
+}

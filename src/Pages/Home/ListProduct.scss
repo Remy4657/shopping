@@ -1,0 +1,22 @@
+.list-product {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 6rem 2rem;
+
+  img {
+    padding-bottom: 1rem;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 1rem;
+  }
+
+  h4 {
+    cursor: "pointer";
+  }
+}

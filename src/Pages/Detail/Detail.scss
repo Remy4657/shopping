@@ -1,0 +1,43 @@
+.content-product {
+  margin-top: 61.2px;
+
+  .product-detail {
+    .product {
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-around;
+      border: 1px solid #ccc;
+
+      .product-footer {
+        button {
+          width: 100%;
+          padding: 1rem 0;
+        }
+
+        h4 {
+          cursor: none;
+        }
+
+        flex: 2;
+        width: fit-content;
+        padding: 0 3rem;
+      }
+
+      .product-img {
+        flex: 1;
+        border-bottom: none;
+        border-right: 1px solid #ccc;
+        height: 30rem;
+      }
+      //   .product-detail-item {
+      //     display: flex;
+      //     .product {
+      //       .product-img {
+      //         flex: 1;
+      //       }
+
+      //     }
+      //   }
+    }
+  }
+}
