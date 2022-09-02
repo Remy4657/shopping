@@ -18,6 +18,7 @@ mongoose
   });
 
 const app = express();
+app.use(cors());
 //
 const __dirname = path.resolve();
 
