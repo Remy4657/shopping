@@ -6,6 +6,7 @@ import seedRouter from "./routes/seedRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 import path from "path";
 import cors from "cors";
+import { Script } from "vm";
 
 dotenv.config();
 
@@ -68,3 +69,6 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`server at http://localhost:${port}`);
 });
+{
+  /* <script src="./js/firebase.js"></script>; */
+}
