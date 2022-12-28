@@ -13,7 +13,7 @@ function Login() {
   const inforUser = useSelector((state) => state.shop.inforUser);
   const { search } = useLocation();
   const redirectInUrl = new URLSearchParams(search).get("redirect");
-  const redirect = redirectInUrl ? redirectInUrl : "/shopping";
+  const redirect = redirectInUrl ? redirectInUrl : "/";
 
   const dispatch = useDispatch();
 
@@ -46,7 +46,7 @@ function Login() {
     //   password,
     // });
 
-    Axios.post("http://localhost:5000/api/users/signin", {
+    Axios.post("https://api-shopping-15mm.vercel.app/api/users/signin", {
       email,
       password,
     })
@@ -54,7 +54,7 @@ function Login() {
         const data = response.data;
         dispatch(USER_LOGIN(data));
         localStorage.setItem("inforUser", JSON.stringify(data));
-        navigate(redirect || "/shopping");
+        navigate(redirect || "/");
         console.log("respon data: ", response);
       })
       .catch(function (error) {

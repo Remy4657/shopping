@@ -13,7 +13,6 @@ import { toast } from "react-toastify";
 const PlaceOrderScreen = () => {
   const cart = useSelector((state) => state.shop.cart);
   const shippingAddress = useSelector((state) => state.shop.shippingAddress);
-
   const Subtotal = cart.reduce(getSum, 0);
   const shipFee = Subtotal * 0.1;
   const discountShip = shipFee * -0.2;

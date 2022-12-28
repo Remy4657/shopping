@@ -23,6 +23,7 @@ function App() {
   useEffect(() => {
     dispatch(handleFetchAllProduct());
   }, []);
+  // comment
   return (
     <div className="d-flex flex-column site-container">
       <Header />

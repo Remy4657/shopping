@@ -18,7 +18,7 @@ function Product(props) {
     const existItem = cart.find((x) => x.id == product.id);
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(
-      `http://localhost:5000/product/${product.id}`
+      `https://api-shopping-15mm.vercel.app/product/${product.id}`
     );
 
     if (data.countInStock < quantity) {

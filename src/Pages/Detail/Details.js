@@ -17,7 +17,9 @@ function Details(props) {
       dispatch({ type: "PRODUCT_REQUEST" });
       try {
         //const result = await fetchProduct(id);
-        const result = await axios.get(`http://localhost:5000/product/${id}`);
+        const result = await axios.get(
+          `https://api-shopping-15mm.vercel.app/product/${id}`
+        );
         console.log("result: ", result);
 
         dispatch(PRODUCT_SUCCESS(result.data));

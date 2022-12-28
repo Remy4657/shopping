@@ -14,7 +14,8 @@ function Register() {
   const inforUser = useSelector((state) => state.shop.inforUser);
 
   const redirectInUrl = new URLSearchParams(search).get("redirect");
-  const redirect = redirectInUrl ? redirectInUrl : "/shopping";
+  const redirect = redirectInUrl ? redirectInUrl : "/";
+  console.log("re 1:", redirectInUrl, "re2", redirect);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -52,7 +53,7 @@ function Register() {
     }
 
     axios
-      .post("http://localhost:5000/api/users/signup", {
+      .post("https://api-shopping-15mm.vercel.app/api/users/signup", {
         name,
         email,
         password,
